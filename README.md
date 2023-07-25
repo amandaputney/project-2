@@ -28,7 +28,14 @@ AAU I would like to see a list of past and future games \
 AAU I would like to be able to comment on specific games and interact with other users as a way to collaborate with the team \
 AAU I would like to update my player statistics in order to track my baseball metrics
 
-## MVP goals/Stretch Goals
+## MVP goals
+
+Log in with OAuth \
+Add and delete games from MongoDB \
+Add and delete players from MongoDB \
+Post comments on specific game events
+
+## Stretch Goals
 
 Potential to include other teams in the league \
 Create an Admin User to monitor QC \
