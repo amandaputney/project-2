@@ -22,7 +22,7 @@ This application will use OAuth authentication to access a database of games pla
 ![Alt text](public/teams.PNG)
 ![Alt text](public/comments.PNG)
 
-## ser Stories
+## User Stories
 
 AAU I would like to see a list of past and future games \
 AAU I would like to be able to comment on specific games and interact with other users as a way to collaborate with the team \
