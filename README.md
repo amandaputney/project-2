@@ -1,21 +1,26 @@
-# Project 2 oAuth Template
+# Project 2 | Dingo's Team Tracker
 
-Use this repo as the base for your project 2.
+The Dingoes are a new baseball team hoping to join the ranks of the Los Angeles Baseball Federation. This full-stack CRUD application will log the player's stats and record the teams activity,
 
-## Getting Started
+## Project Idea and description
 
-* clone this repo (no forking needed)
-* run `rm -rf .git` to remove the git history
-* run `git init` to create a new git history
-* create a new repo on github and follow the instructions to push an existing repository from the command line
-* run `npm i` to install the required packages
-* touch a `.env` file and add the following to it:
+This application will use OAuth authentication to access a database of games played and a team roster with player statisics. There will be comment functionality for the players to discuss post game notes.
 
-```shell
-DATABASE_URL= < copy mongo uri from atlas / previous project >
-GOOGLE_CLIENT_ID= < copy from google cloud devs / previous project >
-GOOGLE_SECRET=< copy from google cloud devs / previous project >
-GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
-SECRET="can be any string"
-```
-* run `nodemon` to test your app! 
+## ERDs
+
+![Alt text](erd.png)
+
+## Restful Routing Chart
+
+## Wireframes of all user views
+
+## User Stories
+
+## MVP goals/Stretch Goals
+
+Potential to include other teams in the league
+Include Third Party APIs
+-air quality
+-weather
+-baseball quotes
+-available baseball fields in LA

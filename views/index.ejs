@@ -1,14 +1,28 @@
 <%- include('./partials/header') %>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="/style.css">
+</head>
+<h2>Dingoes Baseball Homeplate</h2>
 
-<h2>Home Page</h2>
+
 
 <% if (!user) { %>
 	<p>please login to continue</p>
 <% } else { %>
-	<p>Welcome, <%= user.name %> <%= user.email %></p>
+	<p>Welcome, <%= user.name %>
+		 <%= user.email %></p>
 	<% if (user.avatar) { %>
 		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
 	<% } %>
 <% } %>
+
+
+<div name="airvisual_widget" key="64bf130a976057d86246baed"></div>
+<script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+
+<div name="airvisual_widget" key="64bf1592864a24b8f0cb9784"></div>
+<script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
 
 <%- include('./partials/footer') %>
