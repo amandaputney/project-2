@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const gamesCtrl = require('../controllers/games');
+const playersCtrl = require('../controllers/players');
 	
 // GET / AlL games
-router.get('/', gamesCtrl.index);
+router.get('/', playersCtrl.index);
 
 // GET /games/new
-router.get('/new', gamesCtrl.new);
+router.get('/new', playersCtrl.new);
 
 // GET /games/:id game Details (show functionality) MUST be below new route
 // router.get('/:id', gamesCtrl.show);
