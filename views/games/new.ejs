@@ -1,1 +1,16 @@
 <%- include('../partials/header') %>
+
+<form id="new-form" action="/games" method="POST">
+    <label>Date:</label>
+    <input type="text" name="date">
+    <label>Event:</label>
+    <select name="eventType">
+        <option value="Win">Win</option>
+        <option value="Loss">Loss</option>
+        <option value="Tie">Tie</option>
+        <option value="Pick Up Game">Pick Up Game</option>
+    </select>
+    <label>Location:</label>
+    <input type="text" name="location">
+    <input type="submit" value="Add Game">
+</form>         

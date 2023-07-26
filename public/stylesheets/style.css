@@ -21,7 +21,7 @@ body {
     padding: 50px;
     /* font: 18px 'Barlow Condensed',
         sans-serif; */
-    background-color: #f6d0a6;
+    background-color: #f9e5cf;
     font-family: 'Viga', sans-serif;
 
 }
@@ -32,6 +32,17 @@ a {
     padding: 5px;
 }
 
-/* #tomorrow {
-    size: 1vmin;
-} */
+#new-form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, minmax(auto, 22rem));
+}
+
+footer {
+    size: 5vmin;
+    position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: 25px;
+
+}
