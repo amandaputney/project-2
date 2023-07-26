@@ -2,11 +2,11 @@
 
 # Project 2 | Baseball Team Tracker | Amanda Putney
 
-The Dingoes are a new baseball team hoping to join the ranks of the Los Angeles Baseball Federation. This full-stack CRUD application will log the player's stats and record the teams activity,
+The Dingoes are a new baseball team hoping to join the ranks of the Los Angeles Baseball Federation. This full-stack CRUD application will log the player's stats and record the team's activity.
 
 ## Project Idea and description
 
-This application will use OAuth authentication to access a database of games played and a team roster with player statisics. There will be comment functionality for the players to discuss post game notes.
+This Mongo/Express/Node application will use OAuth authentication to access a database of games played and a team roster with player statisics. There will be comment functionality for the players to discuss post game notes.
 
 ## ERDs
 
@@ -33,10 +33,10 @@ AAU I would like to update my player statistics in order to track my baseball me
 Log in with OAuth \
 Add and delete games from MongoDB \
 Add and delete players from MongoDB \
-Post comments on specific game events
 
 ## Stretch Goals
 
+Post comments on specific game events \
 Potential to include other teams in the league \
 Create an Admin User to monitor QC \
 Include Third Party APIs \
