@@ -6,7 +6,7 @@ The Dingoes are a new baseball team hoping to join the ranks of the Los Angeles 
 
 ## Project Idea and description
 
-This Mongo/Express/Node application will use OAuth authentication to access a database of games played and a team roster with player statisics. There will be comment functionality for the players to discuss post game notes.
+This _Mongo/Express/Node_ application will use OAuth authentication to access a database of games played and a team roster with player statisics. There will be comment functionality for the players to discuss post game notes.
 
 ## ERDs
 
@@ -32,7 +32,7 @@ AAU I would like to update my player statistics in order to track my baseball me
 
 Log in with OAuth \
 Add and delete games from MongoDB \
-Add and delete players from MongoDB \
+Add and delete players from MongoDB
 
 ## Stretch Goals
 
