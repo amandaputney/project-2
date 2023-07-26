@@ -1,4 +1,4 @@
-# ![Alt text](public/header.png)
+![Alt text](public/image/header.png)
 
 # Project 2 | Baseball Team Tracker | Amanda Putney
 
@@ -10,17 +10,17 @@ This application will use OAuth authentication to access a database of games pla
 
 ## ERDs
 
-![Alt text](public/erd.png)
+![Alt text](<public/image/Model databases.png>)
 
 ## Restful Routing Chart
 
-![Alt text](public/restful.png)
+![Alt text](public/image/CRUD.png)
 
 ## Wireframes of all user views
 
-![Alt text](public/homplate.PNG)
-![Alt text](public/teams.PNG)
-![Alt text](public/comments.PNG)
+![Alt text](public/image/homplate.PNG)
+![Alt text](public/image/teampage.PNG)
+![Alt text](public/image/comments.PNG)
 
 ## User Stories
 
