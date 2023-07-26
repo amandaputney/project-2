@@ -1,3 +1,11 @@
 <%- include('../partials/header') %>
 
-<a href="/games/new">Add Game</a>
+
+
+<nav>
+    <% if (user) { %>
+        <a href="/games/new">Add Game</a>
+            <% } %>
+
+
+</nav>
