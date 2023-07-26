@@ -1,8 +1,30 @@
 <%- include('../partials/header') %>
 
-<nav>
-    <% if (user) { %>
-        <a href="/games/new">Add Game</a>
-            <% } %>
 
-</nav>
+<table id="list">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Event</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% games.forEach(g => { %>
+            <tr>
+                <td> <%= g.date %> </td>
+                <td> <%= g.event %> </td>
+                <td> <%= g.location %> </td>
+                <td><a href="/games/<%= g._id %>">DETAILS</a></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+
+    <nav>
+        <% if (user) { %>
+            <a href="/games/new">Add Game</a>
+                <% } %>
+    
+    </nav>
