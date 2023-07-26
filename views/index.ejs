@@ -1,25 +1,45 @@
-<%- include('./partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+	<title>
+		<%= title %>
+	</title>
+
+
+<body>
+	<nav>
+		<% if (user) { %>
+			<a href="/logout">LOG OUT</a>
+			<% } else { %>
+				<a href="/auth/google">LOG IN</a>
+				<% } %>
+					 <a href="/games">GAMES</a> <a href="/players">TEAM ROSTER</a>
+
+	</nav>
+
 </head>
-<h2>Dingoes Baseball Homeplate</h2>
+<h1>Dingo Dingers</h1>
 
 
 
 <% if (!user) { %>
-	<p>please login to continue</p>
+	<!-- <p>please login to continue</p> -->
 <% } else { %>
-	<p>Welcome, <%= user.name %>
-		 <%= user.email %></p>
+	<p>Hello <%= user.name %>!</p>
+		 <!-- <%= user.email %></p> -->
 	<% if (user.avatar) { %>
 		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
 	<% } %>
 <% } %>
 
-
-<div name="airvisual_widget" key="64bf130a976057d86246baed"></div>
-<script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
 
 <%- include('./partials/footer') %>
