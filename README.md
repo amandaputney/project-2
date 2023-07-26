@@ -14,7 +14,7 @@ This application will use OAuth authentication to access a database of games pla
 
 ## Restful Routing Chart
 
-![Alt text](public/image/CRUD.png)
+![Alt text](public/image/CRUD_ROUTES.png)
 
 ## Wireframes of all user views
 
