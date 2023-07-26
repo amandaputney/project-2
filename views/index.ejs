@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
 		<%= title %>
 	</title>
 
-
 <body>
 	<nav>
 		<% if (user) { %>
@@ -23,23 +21,22 @@
 				<a href="/auth/google">LOG IN</a>
 				<% } %>
 					 <a href="/games">GAMES</a> <a href="/players">TEAM ROSTER</a>
-
 	</nav>
-
-</head>
-<h1>Dingo Dingers</h1>
-
-
-
-<% if (!user) { %>
-	<!-- <p>please login to continue</p> -->
-<% } else { %>
-	<p>Hello <%= user.name %>!</p>
-		 <!-- <%= user.email %></p> -->
-	<% if (user.avatar) { %>
-		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
-	<% } %>
-<% } %>
-
+	<br>
+	<% if (!user) { %>
+		<!-- <p>please login to continue</p> -->
+		<% } else { %>
+			<!-- <p>Hello <%= user.name %>!</p> -->
+			<!-- <%= user.email %></p> -->
+			<% if (user.avatar) { %>
+				<div class="avatar"><img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar"> Hello <%= user.name %>
+					<!-- <p>Hello <%= user.name %>!</p> -->
+				</div>
+				<% } %>
+				<% } %>
+				
+			</head>
+			<h1>Dingo Dingers</h1>
+<img src="/image/team_bw.png" alt="The Dingoes">
 
 <%- include('./partials/footer') %>

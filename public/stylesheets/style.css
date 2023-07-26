@@ -38,11 +38,19 @@ a {
     grid-template-columns: repeat(1, minmax(auto, 22rem));
 }
 
+.avatar img {
+    border-radius: 50%;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 footer {
     size: 5vmin;
     position: absolute;
-        bottom: 0;
-        left: 0;
-        padding-left: 25px;
+        top: 0;
+        right: 0;
+        padding-right: 10px;
+        padding-top: 10px;
 
 }
