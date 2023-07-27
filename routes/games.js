@@ -10,7 +10,7 @@ router.get('/', gamesCtrl.index);
 router.get('/new', gamesCtrl.new);
 
 // GET /games/:id game Details (show functionality) MUST be below new route
-// router.get('/:id', gamesCtrl.show);
+router.get('/:id', gamesCtrl.show);
 
 // POST /games create new gmae
 router.post('/', gamesCtrl.create);

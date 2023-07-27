@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<!-- DETAILS page -->
+
+<section id="show-page">
+    <div>Date: </div>
+    <div> <%= game.date %> </div>
+    <!-- <div>Time: </div>
+    <div><%= game.time %> </div> -->
+    <div>Event: </div>
+    <div> <%= game.eventType %></div>
+    <div>Location: </div>
+    <div> <%= game.location %></div>
+    <div>Final Score: </div>
+    <div> <%=  %></div>
+    <div>Players: </div>
+    <div> <%=  %></div>
+    <div>Notes: </div>
+    <div> <%=  %></div>
+</section>
+
+<form id="new-form" action="/games" method="PUT"></form>
+    <input type="submit" class="form-input-button" value="UPDATE">
+</form>
+<br>
+<br>
+<form id="new-form" action="/games" method="DELETE"></form>
+<input type="submit" class="form-input-button" value="DELETE">
+</form>
+
+
+
+
+
+
+<%- include('../partials/footer') %>

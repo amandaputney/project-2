@@ -2,17 +2,26 @@
 
 <form id="new-form" action="/games" method="POST">
     <label>Date:</label>
-    <input type="text" class="form-input" name="date">
+    <input type="date" class="form-input" name="date">
     <label>Time:</label>
-    <input type="text" class="form-input" name="date">
+    <input type="time" class="form-input" name="time">
     <label>Event:</label>
     <select name="eventType" class="form-input">
         <option value="Win">Win</option>
         <option value="Loss">Loss</option>
         <option value="Tie">Tie</option>
         <option value="Pick Up Game">Pick Up Game</option>
+        <option value="Practice">Practice</option>
+        <option value="To Be Played">To Be Played</option>
+        <option value="Canceled">Canceled</option>
+        <option value="Postponed">Postponed</option>
+        <option value="Forfeit By Home">Forfeit By Home</option>
+        <option value="Forfeit By Visitor">Forfeit By Visitor</option>
+        <option value="Meeting">Meeting</option>
+        <option value="Party">Party</option>
+        <option value="Other">Other</option>
     </select>
     <label>Location:</label>
     <input type="text" class="form-input" name="location">
-    <input type="submit" class="form-input-button" value="Add Game">
+    <input type="submit" class="form-input-button" value="Submit">
 </form>         
