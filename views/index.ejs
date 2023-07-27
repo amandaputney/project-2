@@ -29,18 +29,18 @@
 	<% if (!user) { %>
 		<!-- <p>please login to continue</p> -->
 		<% } else { %>
-			<!-- <p>Hello <%= user.name %>!</p> -->
-			<!-- <%= user.email %></p> -->
+
 			<% if (user.avatar) { %>
-				<div class="avatar"><img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar"> Hey <%= user.name %>
+				<div class="avatar"><img src="<%= user.avatar %>" 
+				alt="<%= user.name %>'s avatar"> Hey <%= user.name %>
 					<!-- <p>Hello <%= user.name %>!</p> -->
 				</div>
 				<% } %>
 				<% } %>
 				
 			</head>
-			<h1>DINGO DINGERS</h1>
+			<h1>LOS ANGELES DINGOES</h1>
 <img src="/image/team_bw.png" class= "dingo" alt="The Dingoes">
-<h3>Est. 2023 Los Angeles, California</h3>
+<h3>Est. 2023</h3>
 
 <%- include('./partials/footer') %>

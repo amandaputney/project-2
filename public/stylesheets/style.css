@@ -14,23 +14,28 @@ h1 {
     text-align: center;
     position: relative;
     top: 0;
-    font-size: 5rem;
+    font-size: 4rem;
     /* height: 60vh; */
     line-height: 10vh;
-    color: #080808;
+    color: #f69d21;
     font-family: 'Arbutus', cursive;
     font-weight: 600;
     text-shadow: 
         5px 5px 0px #eb452b,
-        10px 10px 0px #efa032,
+        10px 10px 0px #61f9c6,
         15px 15px 0px #46b59b,
         20px 20px 0px #017e7f,
         25px 25px 0px #052939
 }
+          /* 5px 5px 0px #eb452b,
+          10px 10px 0px #efa032,
+          15px 15px 0px #46b59b,
+          20px 20px 0px #017e7f,
+          25px 25px 0px #052939 */
 
 h2 {
     font-family: 'Oleo Script Swash Caps', cursive;
-    color: #000000;
+    color: #46b59b;
     font-size: 5vmin;
 
 }
@@ -46,9 +51,9 @@ h3 {
 
 body {
     padding: 20px;
-    background-color: #f9e5cf;
+    background-color: #000000;
     font-family: 'Viga', sans-serif;
-    color: #d54131;
+    color: #ee7924;
 
 }
 
@@ -113,15 +118,15 @@ nav {
 .form-input-button {
     padding: 10px;
     border-radius: 15px;
-    background-color: #017e7f;
+    background-color: #46b59b;
     /* box-shadow: black; */
     width: 30%;
     font-family: 'Viga', sans-serif;
     resize: vertical;
     border: 0;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 4px 4px 10px rgba(64, 63, 62, 0.344);
     height: 40px;
-    color: antiquewhite;
+    color: #74231a;
 
 }
 
