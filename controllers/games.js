@@ -32,7 +32,7 @@ async function create(req, res) {
     const newGame = await Game.create(req.body);
     console.log('New game:', newGame);
     await newGame.save();
-    res.redirect('/games/index');
+    res.redirect('/games');
   } catch (err) {
     res.render('games/new', { title: 'errorMsg', errMsg: err.message});
   }
