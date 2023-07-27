@@ -4,23 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="/image/Baseball.png">
   <link rel='stylesheet' href='/stylesheets/style.css' />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arbutus&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
   <title><%= title %></title>
 </head>
 <body>
+
   <nav>
     <% if (user) { %>
       <a href="/logout">LOG OUT</a>
-    <% } else { %>
-      <a href="/auth/google">LOG IN</a>
+             <% } else { %>
+              <a href="/auth/google">LOG IN</a>
       <% } %>
-      <a href="/">HOMEPLATE</a> <a href="/games">GAMES</a> <a href="/players">TEAM ROSTER</a>
-      
+      <a href="/">HOMEPLATE</a> <a href="/games">GAMES</a> <a href="/players">ROSTER</a>
+     <% if (!user) { %>
+            <% } else { %>
+               <% if (user.avatar) { %>
   </nav>
+
+   <div class="avatar"><img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar"> Hello <%= user.name %> </div>
+            <% } %>
+              <% } %>
+
   <main>
     <h2><%= title %></h2>
 

@@ -1,28 +1,47 @@
 
-* {
+*, *:before, *:after, input {
     box-sizing: border-box;
-    /* font-family: Barlow Condensed; */
 }
 
-h1 {
-    font-family: 'Oleo Script Swash Caps', cursive;
+/* h1 {
+    /* font-family: 'Oleo Script Swash Caps', cursive; */
+    /* font-family: 'Arbutus', cursive;
     color: #EF933e;
-    font-size: 10vmin;
+    font-size: 10vmin; */
+/* } */ 
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 0;
+    font-size: 5rem;
+    /* height: 60vh; */
+    line-height: 10vh;
+    color: #080808;
+    font-family: 'Arbutus', cursive;
+    font-weight: 600;
+    text-shadow: 
+        5px 5px 0px #eb452b,
+        10px 10px 0px #efa032,
+        5px 15px 0px #46b59b,
+        20px 20px 0px #017e7f,
+        25px 25px 0px #052939
 }
 
 h2 {
     font-family: 'Oleo Script Swash Caps', cursive;
-    color: #7e4612;
+    color: #000000;
     font-size: 5vmin;
 
 }
 
 body {
-    padding: 50px;
+    padding: 20px;
     /* font: 18px 'Barlow Condensed',
         sans-serif; */
     background-color: #f9e5cf;
     font-family: 'Viga', sans-serif;
+    color: #d54131;
 
 }
 
@@ -32,17 +51,83 @@ a {
     padding: 5px;
 }
 
+
 #new-form {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(1, minmax(auto, 22rem));
 }
 
-.avatar img {
+div.avatar img {
     border-radius: 50%;
     height: 40px;
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
+        position: relative;
+            top: 0;
+            right: 0;
+            padding-right: 10px;
+            padding-top: 10px;
+}
+
+div.avatar {
+    border-radius: 50%;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+nav {
+    display: inline-flex;
+    position: relative
+}
+.form-input {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 176, 72);
+    /* box-shadow: black; */
+    width: 100%;
+    font-family: 'Viga', sans-serif;
+    resize: vertical;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    height: 40px;
+    color: #7e4612;
+
+}
+
+.form-input-button {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #017e7f;
+    /* box-shadow: black; */
+    width: 30%;
+    font-family: 'Viga', sans-serif;
+    resize: vertical;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    height: 40px;
+    color: antiquewhite;
+
+}
+
+.dingo { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 80%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    z-index: 20;
 }
 
 footer {
