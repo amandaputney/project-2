@@ -23,11 +23,14 @@
     <br>
     
  
-      <form action="/games/<%= game._id %>?_method=DELETE" method="POST" class="form-input-button" id="new-form">
-            <button type="submit">X</button>
-        </form> 
+      <!-- <form action="/games/<%= game._id %>?_method=DELETE" method="POST" class="form-input-button" id="add">
+            <button type="submit">Delete</button>
+        </form>  -->
 
-        <h2><%= game._id %></h2>
+        <form action="/games/<%= game._id %>?_method=DELETE" method="POST" >
+            <input type="submit" class="form-input-button" value="Delete">
+        </form>
+        <!-- <h2><%= game._id %></h2> -->
 
  
 

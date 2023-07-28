@@ -11,10 +11,10 @@ module.exports = {
 
 async function index(req, res) {
   const games = await Game.find({});
-  function sortByDateAsc(a, b) {
-    return new Date(a.date) - new Date(b.date);
+  function sortByDateDesc(a, b) {
+    return new Date(b.date) - new Date(a.date);
   }
-  const sortedGames = games.sort(sortByDateAsc);
+  const sortedGames = games.sort(sortByDateDesc);
   console.log(sortedGames);
   // console.log(games)
   res.render('games/index', { title: 'All Games', games});
