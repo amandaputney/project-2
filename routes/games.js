@@ -19,6 +19,6 @@ router.post('/', gamesCtrl.create);
 // router.put('/:id', gamesCtrl.update);
 
 // // DELETE /games/:id Deletes A specific game
-// router.delete('/:id', gamesCtrl.delete);
+router.delete('/:id', gamesCtrl.delete);
 	
 module.exports = router;

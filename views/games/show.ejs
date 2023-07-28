@@ -12,25 +12,23 @@
     <div>Location: </div>
     <div> <%= game.location %></div>
     <div>Final Score: </div>
-    <div> <%=  %></div>
+    <div> <%= game.finalScore %></div>
     <div>Players: </div>
     <div> <%=  %></div>
-    <div>Notes: </div>
-    <div> <%=  %></div>
+    <div>Highlights: </div>
+    <div> <%= game.highlights %></div>
 </section>
 
-<form id="new-form" action="/games" method="PUT"></form>
-    <input type="submit" class="form-input-button" value="UPDATE">
-</form>
-<br>
-<br>
-<form id="new-form" action="/games" method="DELETE"></form>
-<input type="submit" class="form-input-button" value="DELETE">
-</form>
+    <br>
+    <br>
+    
+ 
+      <form action="/games/<%= game._id %>?_method=DELETE" method="POST" class="form-input-button" id="new-form">
+            <button type="submit">X</button>
+        </form> 
 
+        <h2><%= game._id %></h2>
 
-
-
-
+ 
 
 <%- include('../partials/footer') %>

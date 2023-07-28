@@ -13,6 +13,8 @@ const gameSchema = new Schema({
         enum: ['Win', 'Loss', 'Tie', 'Pick Up Game', 'Practice', 'To Be Played', 'Canceled', 'Postponed','Forfeit By Home', 'Forfeit By Visitor', 'Meeting', 'Party', 'Other'],
     },
   location: String,
+  finalScore: String, 
+  highlights: String,
   players: [{
     type: Schema.Types.ObjectId,
     ref: 'Player'
