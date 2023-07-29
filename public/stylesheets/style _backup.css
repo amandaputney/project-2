@@ -36,8 +36,7 @@ h1 {
 h2 {
     font-family: 'Oleo Script Swash Caps', cursive;
     color: #46b59b;
-    font-size: 7vmin;
-    padding: 10px;
+    font-size: 5vmin;
 
 }
 
@@ -51,7 +50,7 @@ h3 {
 }
 
 body {
-    padding: 10px;
+    padding: 20px;
     background-color: #000000;
     font-family: 'Viga', sans-serif;
     color: #ee7924;
@@ -59,7 +58,7 @@ body {
 }
 
 a {
-    color: #000000;
+    color: #d54131;
     font-family: 'Viga', sans-serif;
     padding: 5px;
 }
@@ -71,7 +70,7 @@ a {
     grid-template-columns: repeat(1, minmax(auto, 22rem));
 }
 
-div#avatar img {
+div.avatar img {
     border-radius: 50%;
     height: 40px;
     display: inline-block;
@@ -98,15 +97,9 @@ div.avatar {
 }
 
 nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-color:#eb452b;
-    color: white;
-    text-align: center;
+    display: inline-flex;
+    position: relative
 }
-
 .form-input {
     padding: 10px;
     border-radius: 15px;
@@ -123,27 +116,22 @@ nav {
 }
 
 .form-input-button {
-        border-radius: 30px;
-    background-color: #27a98b;
-    padding: 8px;
-    text-decoration: none;
-    font-size: 1.5vmin;
-    color: black;
-    /* padding: 10px;
+    padding: 10px;
     border-radius: 15px;
-    background-color: #27a98b;
-    width: 30%;
+    background-color: #82e2cc;
+    /* box-shadow: black; */
+    width: 20%;
     font-family: 'Viga', sans-serif;
     resize: vertical;
     border: 0;
     box-shadow: 4px 4px 10px rgba(64, 63, 62, 0.344);
     height: 40px;
-    color: #74231a; */
+    color: #74231a;
 
 }
 
 .form-input-button:hover {
-    background-color: #46b59b;
+    background-color: #27a98b;
 }
 
 .dingo { 
@@ -159,7 +147,7 @@ nav {
 }
 
 table {
-    font-size: 2.5vmin;
+    font-size: 20px;
 }
 
 table thead th {
@@ -179,28 +167,25 @@ table td {
 
 #list a {
     border-radius: 30px;
-    background-color: #27a98b;
-    padding: 8px;
+    background-color: #82e2cc;
+    padding: 10px;
     text-decoration: none;
-    font-size: 1.5vmin;
-    color: black;
+    font-size: 14px;
 }
 
 #list a:hover {
-    background-color: #82e2cc;
+    background-color: #27a98b;
 }
 
 #show-page {
     display: grid;
     /* grid-template-columns: auto auto; */
     grid-gap: 1rem;
-    font-size: 2.5vmin;
 }
 
 #show-page div:nth-child(even) {
     font-weight: bold;
     color: #27a98b;
-
 }
 
 footer {
@@ -212,15 +197,3 @@ footer {
         padding-top: 10px;
 
 }
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #ee7924;
-    color: white;
-    text-align: center;
-    
-}
-

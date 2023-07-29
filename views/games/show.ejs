@@ -5,16 +5,14 @@
 <section id="show-page">
     <div>Date: </div>
     <div> <%= game.date %> </div>
-    <!-- <div>Time: </div>
-    <div><%= game.time %> </div> -->
     <div>Event: </div>
     <div> <%= game.eventType %></div>
     <div>Location: </div>
     <div> <%= game.location %></div>
     <div>Final Score: </div>
     <div> <%= game.finalScore %></div>
-    <div>Players: </div>
-    <div> <%=  %></div>
+    <!-- <div>Players: </div>
+    <div> <%=  %></div> -->
     <div>Highlights: </div>
     <div> <%= game.highlights %></div>
 </section>
@@ -23,12 +21,11 @@
 <% if (user) { %>
 
 <table id="list">
+    <td><a href="/games">BACK</a></td>
     <td><a href="/games/<%= game._id %>/edit">EDIT</a></td>
+    <td> <form action="/games/<%= game._id %>?_method=DELETE" method="POST" ><input type="submit" class="form-input-button" value="DELETE">
+    </form></td>
 </table>
-<br>
-<br>
-    <form action="/games/<%= game._id %>?_method=DELETE" method="POST" ><input type="submit" class="form-input-button" value="Delete">
-    </form>
                                  
 <% } %>
  

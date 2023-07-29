@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="/image/Baseball.png">
   <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -12,27 +14,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Arbutus&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-  <title><%= title %></title>
+  <!-- <title><%= title %></title> -->
 </head>
 <body>
 
-  <nav>
-    <% if (user) { %>
-      <a href="/logout">LOG OUT</a>
-             <% } else { %>
-              <a href="/auth/google">LOG IN</a>
+<nav>
+  <% if (user) { %>
+    <a href="/logout">LOG OUT</a>
+    <% } else { %>
+      <a href="/auth/google">LOG IN</a>
       <% } %>
-      <a href="/">HOMEPLATE</a> <a href="/games">GAMES</a> <a href="/players">ROSTER</a>
-     <% if (!user) { %>
-            <% } else { %>
-               <% if (user.avatar) { %>
-  </nav>
+        <a href="/">HOMEPLATE</a> <a href="/games">GAMES</a> <a href="/players">ROSTER</a>
+      </nav>
+        
+        <% if (!user) { %>
+          <% } else { %>
+            <% if (user.avatar) { %>
 
-   <div class="avatar"><img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar"> Hey <%= user.name %> </div>
-            <% } %>
-              <% } %>
+  <% } %>
+  <% } %>
 
-  <main>
-    <h2><%= title %></h2>
+  <h2><%= title %></h2> 
 
     

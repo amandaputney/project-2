@@ -2,6 +2,18 @@
 </body>
 </html>
 <footer>
+    <% if (!user) { %>
+      <!-- <p>please login to continue</p> -->
+      <% } else { %>
+    
+        <% if (user.avatar) { %>
+          <div class="footer" id="avatar"><img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar"> Hey <%= user.name %>
+              <!-- <p>Hello <%= user.name %>!</p> -->
+          </div>
+          <% } %>
+            <% } %>
+
+</footer>
 <!-- <script>
   (function (d, s, id) {
     if (d.getElementById(id)) {
@@ -26,4 +38,3 @@
       src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="250" height="18" /> 
   </a>
 </div> -->
-</footer>
