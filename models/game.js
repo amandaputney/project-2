@@ -15,12 +15,11 @@ const gameSchema = new Schema({
   location: String,
   finalScore: String, 
   highlights: String,
-  players: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Player'
-     }],
+  players: [],
 }, {
     timestamps: true
-});
+},
+  { typeKey: '$type' }
+);
 
 module.exports = mongoose.model('Game', gameSchema);
