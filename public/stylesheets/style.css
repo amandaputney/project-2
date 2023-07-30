@@ -3,13 +3,6 @@
     box-sizing: border-box;
 }
 
-/* h1 {
-    /* font-family: 'Oleo Script Swash Caps', cursive; */
-    /* font-family: 'Arbutus', cursive;
-    color: #EF933e;
-    font-size: 10vmin; */
-/* } */ 
-
 h1 {
     text-align: center;
     position: relative;
@@ -34,10 +27,11 @@ h1 {
           25px 25px 0px #052939 */
 
 h2 {
+    text-align: center;
     font-family: 'Oleo Script Swash Caps', cursive;
     color: #46b59b;
     font-size: 7vmin;
-    padding: 10px;
+    padding: 20px;
 
 }
 
@@ -51,10 +45,13 @@ h3 {
 }
 
 body {
+    /* text-align: start; */
+    /* justify-content: flex-start; */
     padding: 10px;
     background-color: #000000;
     font-family: 'Viga', sans-serif;
     color: #ee7924;
+    margin-bottom: 5vmin;
 
 }
 
@@ -66,9 +63,11 @@ a {
 
 
 #new-form {
+    /* justify-content: center; */
+    /* text-align: justify; */
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(1, minmax(auto, 22rem));
+    grid-template-columns: repeat(1, minmax(auto, 23rem));
 }
 
 div#avatar img {
@@ -109,6 +108,7 @@ nav {
 
 .form-input {
     padding: 10px;
+    text-align: left;
     border-radius: 15px;
     background-color: rgb(255, 176, 72);
     /* box-shadow: black; */
@@ -123,13 +123,14 @@ nav {
 }
 
 .form-input-button {
-        border-radius: 30px;
-    background-color: #27a98b;
-    padding: 8px;
-    text-decoration: none;
+    border-radius: 8px;
+    background-color: #eb452b;
+    padding: 5px;
+    text-align: start;
+    /* text-decoration: none; */
     font-size: 1.5vmin;
-    color: black;
     /* padding: 10px;
+    color: black;
     border-radius: 15px;
     background-color: #27a98b;
     width: 30%;
@@ -143,7 +144,7 @@ nav {
 }
 
 .form-input-button:hover {
-    background-color: #46b59b;
+    background-color: #e36c5a;
 }
 
 .dingo { 
@@ -165,11 +166,13 @@ table {
 table thead th {
     padding: 5px;
     border-bottom: 2px solid #46b59b;
+    text-align: center;
 }
 
 table td {
-    padding: 10px;
-    text-align: center;
+    text-align: start;
+    padding: 5px;
+    margin: 5px;
 }
 
 #list td:nth-child(2),
@@ -178,7 +181,7 @@ table td {
 }
 
 #list a {
-    border-radius: 30px;
+    border-radius: 8px;
     background-color: #27a98b;
     padding: 8px;
     text-decoration: none;
@@ -192,14 +195,15 @@ table td {
 
 #show-page {
     display: grid;
-    /* grid-template-columns: auto auto; */
+    grid-template-columns: 5vmin, 5vmin;
     grid-gap: 1rem;
     font-size: 2.5vmin;
 }
 
 #show-page div:nth-child(even) {
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #27a98b;
+
 
 }
 
@@ -211,6 +215,30 @@ footer {
         padding-right: 10px;
         padding-top: 10px;
 
+}
+
+div.container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit) !important;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.container>.card {
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(220, 176, 119);
+}
+
+p.card-text {
+    margin: 0;
+}
+div.card-body {
+    padding: 0;
 }
 
 .footer {

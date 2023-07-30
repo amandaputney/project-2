@@ -30,10 +30,16 @@
     <input type="text" class="form-input" name="players" value="<%= game.players %>">
     <label>Highlights:</label>
     <input type="text" class="form-input" name="highlights" value="<%= game.highlights %>">
-    <input type="submit" class="form-input-button" value="Submit">
-</form>
+        <table id="list">
+            <td><a href="/games/<%= game.id %>"> BACK </a></td>
+            <td><input type="submit" class="form-input-button" value="UPDATE"></td>
+        </table>
+        </form>
+
+
 
 
 
 
 <%- include('../partials/footer') %>
+

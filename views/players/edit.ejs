@@ -1,0 +1,59 @@
+<%- include('../partials/header') %>
+
+
+<form id="new-form" action="/players/<%= player._id %>?_method=PATCH" method="POST">
+<label>Name</label>
+<input type="text" class="form-input" name="name">
+<label>Nick Name</label>
+<input type="text" class="form-input" name="nickName">
+<label>Position:</label>
+<input type="text" class="form-input" name="position">
+<label>Bats:</label>
+<select name="bats" class="form-input">
+    <option value="Left">Left</option>
+    <option value="Right">Right</option>
+    <option value="Switch Hitter">Switch Hitter</option>
+</select>
+<label>Throws:</label>
+<select name="throws" class="form-input">
+    <option value="Left">Left</option>
+    <option value="Right">Right</option>
+    <option value="Switch Pitcher">Switch Pitcher</option>
+</select>
+<label>Height:</label>
+<input type="text" class="form-input" name="height">
+<label>Weight:</label>
+<input type="text" class="form-input" name="weight">
+<label>Birth Date:</label>
+<input type="date" class="form-input" name="birthDate">
+<label>Birth Place:</label>
+<input type="text" class="form-input" name="birthPlace">
+<label>Joined Team:</label>
+<input type="date" class="form-input" name="joinedTeam">
+<label>AB:</label>
+<input type="text" class="form-input" name="atBats">
+<label>HR:</label>
+<input type="text" class="form-input" name="homeRuns">
+<label>RBI:</label>
+<input type="text" class="form-input" name="runsBattedIn">
+<label>OBP:</label>
+<input type="text" class="form-input" name="onBasePercentage">
+<label>Active:</label>
+<input type="checkbox" class="form-input" name="active">
+
+
+
+<table id="list">
+    <td>
+    <td><a href="/players/<%= player.id %>"> BACK </a></td>
+    <td><input type="submit" class="form-input-button" value="UPDATE"></td>
+</table>
+</form>
+
+
+
+
+
+
+<%- include('../partials/footer') %>
+

@@ -11,14 +11,15 @@ router.get('/new', playersCtrl.new);
 
 // GET /games/:id game Details (show functionality) MUST be below new route
 // router.get('/:id', gamesCtrl.show);
+router.get('/:id', playersCtrl.show);
+
+router.get('/:id/edit', playersCtrl.edit);
 
 // // POST /games create new gmae
-// router.post('/', gamesCtrl.create);
+router.post('/', playersCtrl.create);
 
-// // PUT /games/:id Updates A specific game
-// router.put('/:id', gamesCtrl.update);
+router.patch('/:id', playersCtrl.update);
 
-// // DELETE /games/:id Deletes A specific game
-// router.delete('/:id', gamesCtrl.delete);
-	
+router.delete('/:id', playersCtrl.delete);
+
 module.exports = router;

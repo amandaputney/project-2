@@ -1,25 +1,37 @@
-const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const playerSchema = new Schema({
-//     gameID: ObjectId,
-//     userID: [{
-//     type: Schema.Types.ObjectId,
-//     ref: 'User'
-//   }],
-//     date: Date,
-//     eventType: {
-//         type: String, 
-//         enum: ['Win', 'Loss', 'Tie', 'Pick Up Game', 'Practice', 'To Be Played', 'Canceled', 'Postponed','Forfeit By Home', 'Forfeit By Visitor', 'Meeting', 'Party', 'Other']
-//     },
-//     players: [{
-//     type: Schema.Types.ObjectId,
-//     ref: 'Player'
-//   }],
-
-}, {
-    timestamps: true
-});
+    userID: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+        }],
+    name: String,
+    nickName: String,
+    position: String,
+    team: String,
+    bats: {
+            type: String, 
+            enum: ['Right', 'Left', 'Switch Hitter'],
+        },
+    throws: {
+            type: String, 
+            enum: ['Right', 'Left', 'Switch Pitcher'],
+        },
+    height: String,
+    weight: String, 
+    birthDate: String,
+    birthPlace: String,
+    joinedTeam: String,
+    atBats: Number,
+    homeRuns: Number,
+    runsBattedIn: Number,
+    onBasePercentage: Number,
+    active: { type: Boolean},
+    }, {
+        timestamps: true
+    },
+    { typeKey: '$type' }
+    );
 
 module.exports = mongoose.model('Player', playerSchema);

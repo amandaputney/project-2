@@ -80,14 +80,3 @@ async function create(req, res) {
   }
   }
 
-
-//  async function edit(req, res) {
-//   try {
-//     const editGame = await Game.getOne({_id: req.params.id});
-//     res.render(`games/${req.params.id}/edit`, { title: 'Edit Game', editGame});
-//   } catch (err) {
-//         res.render(`games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message});
-
-//   }
-// };
-
