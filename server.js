@@ -16,6 +16,7 @@ require('./config/passport');
 const indexRouter = require('./routes/index');
 const gamesRouter = require('./routes/games');
 const playersRouter = require('./routes/players');
+const commentsRouter = require('./routes/comments');
 
 const app = express();
 
@@ -42,20 +43,21 @@ app.use(passport.session());
 
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
-	res.locals.user = req.user;
+  res.locals.user = req.user;
   next();
 });
 
 app.use('/', indexRouter);
 app.use('/games', gamesRouter);
 app.use('/players', playersRouter);
+app.use('/', commentsRouter);
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //   next(createError(404));
 // });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

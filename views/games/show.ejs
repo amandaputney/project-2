@@ -1,33 +1,100 @@
 <%- include('../partials/header') %>
 
-<!-- DETAILS page -->
+    <!-- DETAILS page -->
 
-<section id="show-page">
-    <div>Date: </div>
-    <div> <%= game.date %> </div>
-    <div>Event: </div>
-    <div> <%= game.eventType %></div>
-    <div>Location: </div>
-    <div> <%= game.location %></div>
-    <div>Final Score: </div>
-    <div> <%= game.finalScore %></div>
-    <!-- <div>Players: </div>
-    <div> <%=  %></div> -->
-    <div>Highlights: </div>
-    <div> <%= game.highlights %></div>
-</section>
-<br>
+    <section id="show-page">
+        <div>Date: </div>
+        <div>
+            <%= game.date %>
+        </div>
+        <div>Event: </div>
+        <div>
+            <%= game.eventType %>
+        </div>
+        <div>Location: </div>
+        <div>
+            <%= game.location %>
+        </div>
+        <div>Final Score: </div>
+        <div>
+            <%= game.finalScore %>
+        </div>
+        <div>Highlights: </div>
+        <div>
+            <%= game.highlights %>
+        </div>
+        <!-- <div>Players: </div>
+        <div>
+            <%= game.playersPresent %>
+        </div> -->
+    </section>
+    <br>
 
-<% if (user) { %>
 
-<table id="list">
-    <td><a href="/games">BACK</a></td>
-    <td><a href="/games/<%= game._id %>/edit">EDIT</a></td>
-    <td><form action="/games/<%= game._id %>?_method=DELETE" method="POST" ><input type="submit" class="form-input-button" value="DELETE">
-    </form></td>
-</table>
-                                 
-<% } %>
- 
-<%- include('../partials/footer') %>
 
+    <% if (user) { %>
+
+        <table id="list">
+            <td><a href="/games">BACK</a></td>
+            <td><a href="/games/<%= game._id %>/edit">EDIT</a></td>
+            <td>
+                <form action="/games/<%= game._id %>?_method=DELETE" method="POST"><input type="submit"
+                        class="form-input-button" value="DELETE">
+                </form>
+            </td>
+        </table>
+
+
+        <br><br>
+        <h2>Comments</h2>
+        <form id="add-comment-form" method="POST" action="/comments/<%= game._id %>/comments">
+            <label>Comment:</label>
+            <br><br>
+            <textarea name="content"></textarea>
+            <br><br>
+            <input type="submit" class="form-input-button" value="Add Comment">
+        </form>
+        <br><br>
+
+        <% if (game.comments.length) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <h5>User</h5>
+                        </th>
+                        <th>
+                            <h5>Date</h5>
+                        </th>
+                        <th>
+                            <h5>Comment</h5>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% game.comments.forEach(function(c) { %>
+
+                        <tr>
+                            <td class="comment-user" id="avatar"><img alt="avatar" src="<%= c.userAvatar %>"
+                                    referrerpolicy="no-referrer">
+                                <%= c.userName %>
+                            </td>
+                            <td>
+                                <%= c.createdAt.toLocaleDateString() %>
+                            </td>
+                            <td>
+                                <%= c.content %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                            <tr>
+                                <td colspan="3"></td>
+
+                </tbody>
+            </table>
+            <% } else { %>
+                <h5>No Comments Yet</h5>
+                <% } %>
+
+                    <% } %>
+                        <%- include('../partials/footer') %>

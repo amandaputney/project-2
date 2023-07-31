@@ -5,21 +5,21 @@ const playerSchema = new Schema({
     userID: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
-        }],
+    }],
     name: String,
     nickName: String,
     position: String,
     team: String,
     bats: {
-            type: String, 
-            enum: ['Right', 'Left', 'Switch Hitter'],
-        },
+        type: String,
+        enum: ['Right', 'Left', 'Switch Hitter'],
+    },
     throws: {
-            type: String, 
-            enum: ['Right', 'Left', 'Switch Pitcher'],
-        },
+        type: String,
+        enum: ['Right', 'Left', 'Switch Pitcher'],
+    },
     height: String,
-    weight: String, 
+    weight: String,
     birthDate: String,
     birthPlace: String,
     joinedTeam: String,
@@ -27,11 +27,14 @@ const playerSchema = new Schema({
     homeRuns: Number,
     runsBattedIn: Number,
     onBasePercentage: Number,
-    active: { type: Boolean},
-    }, {
-        timestamps: true
+    active: {
+        type: String,
+        enum: ['Yes', 'No'],
     },
+}, {
+    timestamps: true
+},
     { typeKey: '$type' }
-    );
+);
 
 module.exports = mongoose.model('Player', playerSchema);

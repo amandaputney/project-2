@@ -1,10 +1,11 @@
 
 const Game = require('../models/game');
+const Player = require('../models/player');
 
 module.exports = {
   index,
-   show,
-  new: newGame, 
+  show,
+  new: newGame,
   create,
   delete: deleteGame,
   edit,
@@ -17,7 +18,7 @@ async function index(req, res) {
     return new Date(b.date) - new Date(a.date);
   }
   const sortedGames = games.sort(sortByDateDesc);
-  res.render('games/index', { title: 'All Games', games});
+  res.render('games/index', { title: 'All Games', games });
 
 }
 
@@ -25,26 +26,38 @@ async function index(req, res) {
 async function update(req, res) {
   try {
     // const updateGame= await Game.update(req.params.id, req.body);
-    const updateGame= await Game.findOneAndUpdate({_id: req.params.id}, req.body);
+    const updateGame = await Game.findOneAndUpdate({ _id: req.params.id }, req.body);
     // await updateGame.save();
     console.log(updateGame);
     res.redirect(`/games/${req.params.id}`);
   } catch (err) {
-      // res.redirect(`/games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message});
-      res.send(err)
+    // res.redirect(`/games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message});
+    res.send(err)
   }
-  }
+}
 //findoneandupdate
 
-async function edit(req, res) {
- try {
-   const editGame = await Game.findById(req.params.id);
-   res.render('games/edit', { title: 'Edit Game', game: editGame});
-  //  console.log('LOOK HERE: ', editGame);
- } catch (err) {
-       res.render(`games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message});
+// async function edit(req, res) {
+//   try {
+//     const editGame = await Game.findById(req.params.id).populate('playersPresent');
+//     const players = await Player.find({ _id: { $nin: game.playersPresent } }).sort('name');
+//     res.render('games/edit', { title: 'Edit Game', game: editGame, players });
+//     //  console.log('LOOK HERE: ', editGame);
+//   } catch (err) {
+//     res.render(`games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message });
 
- }
+//   }
+// }
+
+async function edit(req, res) {
+  try {
+    const editGame = await Game.findById(req.params.id);
+    res.render('games/edit', { title: 'Edit Game', game: editGame });
+    //  console.log('LOOK HERE: ', editGame);
+  } catch (err) {
+    res.render(`games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message });
+
+  }
 }
 
 
@@ -66,17 +79,17 @@ async function create(req, res) {
     await newGame.save();
     res.redirect('/games');
   } catch (err) {
-    res.render('games/new', { title: 'errorMsg', errMsg: err.message});
+    res.render('games/new', { title: 'errorMsg', errMsg: err.message });
   }
 }
 
 
-  async function deleteGame(req, res) {
-    try {
-      const deleteThisGame = await Game.deleteOne({_id: req.params.id});
-      res.redirect('/games');
-    } catch (err) {
-      res.render(`games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message});
+async function deleteGame(req, res) {
+  try {
+    const deleteThisGame = await Game.deleteOne({ _id: req.params.id });
+    res.redirect('/games');
+  } catch (err) {
+    res.render(`games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message });
   }
-  }
+}
 

@@ -1,52 +1,55 @@
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/players" method="POST">
-    <label>Name</label>
-    <input type="text" class="form-input" name="name">
-    <label>Nick Name</label>
-    <input type="text" class="form-input" name="nickName">
-    <label>Position:</label>
-    <input type="text" class="form-input" name="position">
-    <label>Bats:</label>
-    <select name="bats" class="form-input">
-        <option value="Left">Left</option>
-        <option value="Right">Right</option>
-        <option value="Switch Hitter">Switch Hitter</option>
-    </select>
-    <label>Throws:</label>
-    <select name="throws" class="form-input">
-        <option value="Left">Left</option>
-        <option value="Right">Right</option>
-        <option value="Switch Pitcher">Switch Pitcher</option>
-    </select>
-    <label>Height:</label>
-    <input type="text" class="form-input" name="height">
-    <label>Weight:</label>
-    <input type="text" class="form-input" name="weight">
-    <label>Birth Date:</label>
-    <input type="date" class="form-input" name="birthDate">
-    <label>Birth Place:</label>
-    <input type="text" class="form-input" name="birthPlace">
-    <label>Joined Team:</label>
-    <input type="date" class="form-input" name="joinedTeam">
-    <label>AB:</label>
-    <input type="text" class="form-input" name="atBats">
-    <label>HR:</label>
-    <input type="text" class="form-input" name="homeRuns">
-    <label>RBI:</label>
-    <input type="text" class="form-input" name="runsBattedIn">
-    <label>OBP:</label>
-    <input type="text" class="form-input" name="onBasePercentage">
-    <label>Active:</label>
-    <input type="checkbox" class="form-input" name="active">
-    
-   
+    <form id="new-form" action="/players" method="POST">
+        <label>Name</label>
+        <input type="text" class="form-input" name="name">
+        <label>Nick Name</label>
+        <input type="text" class="form-input" name="nickName">
+        <label>Position:</label>
+        <input type="text" class="form-input" name="position">
+        <label>Bats:</label>
+        <select name="bats" class="form-input">
+            <option value="Left">Left</option>
+            <option value="Right">Right</option>
+            <option value="Switch Hitter">Switch Hitter</option>
+        </select>
+        <label>Throws:</label>
+        <select name="throws" class="form-input">
+            <option value="Left">Left</option>
+            <option value="Right">Right</option>
+            <option value="Switch Pitcher">Switch Pitcher</option>
+        </select>
+        <label>Height:</label>
+        <input type="text" class="form-input" name="height">
+        <label>Weight:</label>
+        <input type="text" class="form-input" name="weight">
+        <label>Birth Date:</label>
+        <input type="date" class="form-input" name="birthDate">
+        <label>Birth Place:</label>
+        <input type="text" class="form-input" name="birthPlace">
+        <label>Joined Team:</label>
+        <input type="date" class="form-input" name="joinedTeam">
+        <label>AB:</label>
+        <input type="text" class="form-input" name="atBats">
+        <label>HR:</label>
+        <input type="text" class="form-input" name="homeRuns">
+        <label>RBI:</label>
+        <input type="text" class="form-input" name="runsBattedIn">
+        <label>OBP:</label>
+        <input type="text" class="form-input" name="onBasePercentage">
+        <label>Active:</label>
+        <select name="active" class="form-input">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
 
-    <table id="list">
-        <td>
-        <td><a href="/players"> BACK </a></td>
-        <td><input type="submit" class="form-input-button" value="SUBMIT"></td>
-    </table>
-</form>
 
-<%- include('../partials/footer') %>
+
+        <table id="list">
+            <td>
+            <td><a href="/players"> BACK </a></td>
+            <td><input type="submit" class="form-input-button" value="SUBMIT"></td>
+        </table>
+    </form>
+
+    <%- include('../partials/footer') %>

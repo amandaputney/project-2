@@ -1,31 +1,35 @@
 <%- include('../partials/header') %>
 
 
-<% players.forEach(p=> { %>
+    <% players.forEach(p=> { %>
 
-    <div class="container">
-    <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="image/meandingo.PNG" alt="Card image cap">
-        <div class="card-body">
-        <h5 class="card-title"> <%= p.name %> </h5><p class="card-text">"<%= p.nickName %>"</small></p>
-        <p class="card-text">Postion:<%= p.position %></small></p>
-        <p class="card-text">Bats: <%= p.bats %> Throws: <%= p.throws %></small></p>
-        <a href="/players/<%= p._id %>">DETAILS</a>
+        <div class="container">
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="image/meandingo.PNG" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="/players/<%= p._id %>">
+                            <%= p.name %>
+                        </a>
+                    </h5>
+                    <p class="card-text">"<%= p.nickName %>"</small></p>
+                    <p class="card-text">Postion: <%= p.position %></small></p>
+                    <p class="card-text">Bats: <%= p.bats %> Throws: <%= p.throws %></small></p>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
 
-<% }); %>
+        <% }); %>
 
 
-<table id="list">
-        <nav>
-            <% if (user) { %>
-                    <td> <a href="/players/new"" id="Add">+</a></td>
-            <% } %>
-            
-        </nav>
-</table>
+            <table id="list">
+                <nav>
+                    <% if (user) { %>
+                        <td> <a href="/players/new"" id=" Add">+</a></td>
+                        <% } %>
+
+                </nav>
+            </table>
 
 
-<%- include('../partials/footer') %>
+            <%- include('../partials/footer') %>

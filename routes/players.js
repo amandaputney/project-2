@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const playersCtrl = require('../controllers/players');
-	
+
 // GET / AlL games
 router.get('/', playersCtrl.index);
 
@@ -15,11 +15,12 @@ router.get('/:id', playersCtrl.show);
 
 router.get('/:id/edit', playersCtrl.edit);
 
-// // POST /games create new gmae
 router.post('/', playersCtrl.create);
 
 router.patch('/:id', playersCtrl.update);
 
 router.delete('/:id', playersCtrl.delete);
+
+router.post('/games/:id/players', playersCtrl.addToGame);
 
 module.exports = router;
