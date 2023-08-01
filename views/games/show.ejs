@@ -46,14 +46,12 @@
                 </form>
             </td>
         </table>
-
-
         <br><br>
         <h2 id="comments">Comments</h2>
         <form id="add-comment-form" method="POST" action="/comments/<%= game._id %>/comments">
             <textarea name="content"></textarea>
             <br><br>
-            <input type="submit" class="form-input-button" value="Add Comment">
+            <input type="submit" class="form-input-button" value="POST">
         </form>
         <br><br>
 
@@ -85,6 +83,13 @@
                             </td>
                             <td>
                                 <%= c.content %>
+                            </td>
+                            <td>
+                                <% if (user?._id.equals(c.user)) { %>
+                                    <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                                        <input type="submit" class="form-input-button" value="Remove">
+                                    </form>
+                                <% } %>
                             </td>
                         </tr>
                         <% }); %>

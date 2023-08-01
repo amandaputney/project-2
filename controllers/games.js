@@ -35,19 +35,7 @@ async function update(req, res) {
     res.send(err)
   }
 }
-//findoneandupdate
 
-// async function edit(req, res) {
-//   try {
-//     const editGame = await Game.findById(req.params.id).populate('playersPresent');
-//     const players = await Player.find({ _id: { $nin: game.playersPresent } }).sort('name');
-//     res.render('games/edit', { title: 'Edit Game', game: editGame, players });
-//     //  console.log('LOOK HERE: ', editGame);
-//   } catch (err) {
-//     res.render(`games/${req.params.id}`, { title: 'errorMsg', errMsg: err.message });
-
-//   }
-// }
 
 async function edit(req, res) {
   try {

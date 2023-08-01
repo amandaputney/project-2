@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const commentsCtrl = require('../controllers/comments');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-// POST /movies/:id/reviews (create review for a movie)
-router.post('/comments/:id/comments', commentsCtrl.create);
+
+router.post('/comments/:id/comments', ensureLoggedIn, commentsCtrl.create);
+
+router.delete('/comments/:id', ensureLoggedIn, commentsCtrl.delete);
 
 module.exports = router;

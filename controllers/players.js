@@ -51,12 +51,6 @@ function newPlayer(req, res) {
 }
 
 async function create(req, res) {
-  // //converts checkbox to bolean
-  // req.body.active = !!req.body.active;
-  // // Remove empty properties so that defaults will be applied
-  // for (let key in req.body) {
-  //   if (req.body[key] === '') delete req.body[key];
-  // }
   try {
     console.log(req.body)
     const newPlayer = await Player.create(req.body);
