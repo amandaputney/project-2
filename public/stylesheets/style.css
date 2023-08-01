@@ -13,6 +13,7 @@ h1 {
     height: 100%;
     text-align: center;
     position: relative;
+    padding: 1rem;
     top: 0;
     font-size: 4rem;
     /* height: 60vh; */
@@ -33,7 +34,7 @@ h2 {
     font-family: 'Oleo Script Swash Caps', cursive;
     color: #46b59b;
     font-size: 7vmin;
-    padding: 20px;
+    padding: 2rem;
 
 }
 
@@ -109,9 +110,13 @@ nav {
     left: 0;
     top: 0;
     width: 100%;
+    /* height: 2rem; */
     background-color: #eb452b;
     color: white;
     text-align: center;
+    padding: 5px 0;
+
+
 }
 
 .form-input {
@@ -139,7 +144,6 @@ nav {
     /* text-decoration: none; */
     font-size: 1.5vmin;
 
-
 }
 
 .form-input-button:hover {
@@ -150,18 +154,15 @@ nav {
     /* display: block; */
     display: block;
     width: 80%;
-    height: 60%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     top: 0;
     left: 0;
-    z-index: 20;
+    /* z-index: 20; */
 }
 
-/* table {
-    font-size: 2.5vmin;
-} */
 
 table thead th {
     /* padding: 5px; */
