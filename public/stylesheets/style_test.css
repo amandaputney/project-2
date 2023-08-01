@@ -1,0 +1,10 @@
+*,
+*:before,
+*:after,
+input {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}

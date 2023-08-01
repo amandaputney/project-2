@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,24 +15,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Arbutus&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-	
-	<body>
-		<nav>
-			<% if (user) { %>
-				<a href="/logout">LOG OUT</a>
-				<% } else { %>
-					<a href="/auth/google">LOG IN</a>
-					<% } %>
+
+<body>
+	<nav>
+		<% if (user) { %>
+			<a href="/logout">LOG OUT</a>
+			<% } else { %>
+				<a href="/auth/google">LOG IN</a>
+				<% } %>
 					<a href="/games">SCHEDULE</a> <a href="/players">ROSTER</a>
-		</nav>
-				<br>
+	</nav>
+	<br>
 
-				<title>
-					<%= title %>
-				</title>
-		
-			<h1>LOS ANGELES DINGOES</h1>
-<img src="/image/team_bw.png" class= "dingo" alt="The Dingoes">
-<h3>Est. 2023</h3>
+	<title>
+		<%= title %>
+	</title>
 
-<%- include('./partials/footer') %>
+	<h1>LOS ANGELES DINGOES</h1>
+	<!-- <h3>Est 2023</h3> -->
+	<!-- <img src="/image/team_bw.png" class= "dingo" alt="The Dingoes">
+<h3>Est. 2023</h3> -->
+
+	<%- include('./partials/footer') %>

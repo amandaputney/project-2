@@ -1,33 +1,32 @@
-*,
+/* *,
 *:before,
 *:after,
 input {
     box-sizing: border-box;
+} */
+
+* {
+    box-sizing: border-box;
 }
 
 h1 {
+    height: 100%;
     text-align: center;
     position: relative;
     top: 0;
     font-size: 4rem;
     /* height: 60vh; */
-    line-height: 10vh;
+    /* line-height: 10vh; */
     color: #f69d21;
     font-family: 'Arbutus', cursive;
     font-weight: 600;
     text-shadow:
-        5px 5px 0px #eb452b,
+        5px 5px 0px black,
         10px 10px 0px #61f9c6,
         15px 15px 0px #46b59b,
         20px 20px 0px #017e7f,
         25px 25px 0px #052939
 }
-
-/* 5px 5px 0px #eb452b,
-          10px 10px 0px #efa032,
-          15px 15px 0px #46b59b,
-          20px 20px 0px #017e7f,
-          25px 25px 0px #052939 */
 
 h2 {
     text-align: center;
@@ -50,6 +49,7 @@ h3 {
 body {
     /* text-align: start; */
     /* justify-content: flex-start; */
+    display: grid;
     padding: 10px;
     background-color: #000000;
     font-family: 'Viga', sans-serif;
@@ -62,30 +62,21 @@ a {
     color: #000000;
     font-family: 'Viga', sans-serif;
     padding: 5px;
+    margin: 5px;
+    grid-gap: 1px;
 }
 
 
 #new-form {
     /* justify-content: center; */
     /* text-align: justify; */
+    margin-top: 20px;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(1, minmax(auto, 23rem));
+    /* grid-template-columns: repeat(1, minmax(auto, 23rem)); */
 }
 
-div#avatar img {
-    border-radius: 50%;
-    height: 40px;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    position: relative;
-    top: 0;
-    right: 0;
-    padding-right: 10px;
-    padding-top: 10px;
-}
-
+div#avatar img,
 .comment-user img {
     border-radius: 50%;
     height: 40px;
@@ -98,6 +89,7 @@ div#avatar img {
     padding-right: 10px;
     padding-top: 10px;
 }
+
 
 div.avatar {
     border-radius: 50%;
@@ -123,12 +115,13 @@ nav {
 }
 
 .form-input {
+    margin-top: 20px;
     padding: 10px;
     text-align: left;
     border-radius: 15px;
     background-color: rgb(255, 176, 72);
     /* box-shadow: black; */
-    width: 60%;
+    width: 40%;
     font-family: 'Viga', sans-serif;
     resize: vertical;
     border: 0;
@@ -142,20 +135,10 @@ nav {
     border-radius: 8px;
     background-color: #eb452b;
     padding: 5px;
-    text-align: start;
+    text-align: left;
     /* text-decoration: none; */
     font-size: 1.5vmin;
-    /* padding: 10px;
-    color: black;
-    border-radius: 15px;
-    background-color: #27a98b;
-    width: 30%;
-    font-family: 'Viga', sans-serif;
-    resize: vertical;
-    border: 0;
-    box-shadow: 4px 4px 10px rgba(64, 63, 62, 0.344);
-    height: 40px;
-    color: #74231a; */
+
 
 }
 
@@ -164,36 +147,45 @@ nav {
 }
 
 .dingo {
+    /* display: block; */
     display: block;
+    width: 80%;
+    height: 60%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 80%;
-    height: 60%;
     top: 0;
     left: 0;
     z-index: 20;
 }
 
-table {
+/* table {
     font-size: 2.5vmin;
-}
+} */
 
 table thead th {
-    padding: 5px;
+    /* padding: 5px; */
     border-bottom: 2px solid #46b59b;
     text-align: center;
 }
 
 table td {
-    text-align: start;
     padding: 5px;
+    display: flexbox;
+    text-align: center;
+    font-size: 2.5vmin;
+    table-layout: fixed;
+    width: 1px;
+    /* white-space: nowrap; */
+    /* text-align: start; */
+    /* padding: 5px;
     margin: 5px;
+    */
 }
 
 #list td:nth-child(2),
 #list td:nth-child(3) {
-    min-width: 100px;
+    min-width: 5px;
 }
 
 #list a {
@@ -209,27 +201,34 @@ table td {
     background-color: #82e2cc;
 }
 
+#comments {
+    text-align: left;
+}
+
 #show-page {
     display: grid;
-    grid-template-columns: 5vmin, 5vmin;
-    grid-gap: 1rem;
-    font-size: 2.5vmin;
+    text-align: center;
+    /* grid-template-columns: 5vmin, 5vmin; */
+    grid-gap: .5rem;
+    font-size: 3vmin;
 }
 
 #show-page div:nth-child(even) {
-    /* font-weight: bold; */
-    color: #27a98b;
-
-
+    color: #1a8068;
 }
 
-footer {
-    size: 5vmin;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-right: 10px;
-    padding-top: 10px;
+/* #add-comment-form {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2 / 3;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+} */
+
+#add-comment-form input[type="submit"] {
+    align-items: center;
+    width: 6rem;
+    grid-column: 1 / 3;
 
 }
 
